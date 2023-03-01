@@ -14,8 +14,12 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 */
 
-let unique = function(array) {
-    // Your code here
+let unique = function (array) {
+    let distinct = [];
+    array.forEach((num) => {
+        if (!distinct.includes(num)) distinct.push(num)
+    })
+    return distinct;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
@@ -24,4 +28,4 @@ try {
     module.exports = unique;
 } catch (e) {
     module.exports = null;
-}
+}
